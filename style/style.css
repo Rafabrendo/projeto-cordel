@@ -1,0 +1,136 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Passion+One&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+:root{
+    --cor0:white;
+    --cor1:black;
+    --fonte1: Verdana, Geneva, Tahoma, sans-serif;
+    --fonte2: 'Passion One', cursive;
+    --fonte3: 'Sriracha', cursive;
+
+}
+
+*{
+    margin:0px;
+    padding: 0px;
+    font-size: 1em;
+    text-decoration: none;
+}
+
+html, body{
+    min-height: 100vh;
+    /*O tamanho minimo do html e do body é de 100% da viewport*/
+    background-color: rgba(252, 251, 251, 0.185);
+    font-family: var(--fonte1);
+}
+
+
+header{
+    background-color: var(--cor1);
+    color: var(--cor0);
+    height: 320px;
+    text-align: center;
+    border:1px solid white;
+    position: relative;
+}
+
+header > h1{
+    border: 1px solid transparent;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    padding-bottom: 50px;
+    /* text-transform: uppercase; */
+    font-family: var(--fonte2);
+    font-size: 5vw;
+    /*Coloquei 5% da largura da tela
+    (viweport width)
+    É uma gambiarra */
+    letter-spacing: 2px;
+    font-variant: small-caps;
+    /* Continuo tendo as letras maiusculas mas as primeiras são maiores */
+    transform: translate(-50%, -50%);
+}
+
+header > p{
+    font-size: 1.6vw;
+    border: 1px solid transparent;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, 150%);
+    padding-bottom: 5px;
+}
+
+header a, footer a{
+    color:var(--cor0);
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+header a:hover, footer a:hover{
+    text-decoration: underline;
+    width: 15px;
+
+}
+
+section{
+    height: 100vh;
+    width: auto;
+    padding: 50px 50px;
+    line-height: 1.8em;
+    font-size: 1.4em;
+    font-family: var(--fonte3);
+    color:var(--cor1);
+    font-weight: bold;
+    padding-top:  5vh;
+    padding-bottom: 16vh;
+    
+}
+
+section > p{
+    padding-bottom: 2em;
+}
+
+section.imagem{
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.541);
+    /* background-size: cover; */
+}
+
+.imagem > p{
+    color: white;
+    font-weight: lighter;
+    display: inline-block;
+    border-radius: 4px 4px;
+    background-color: rgba(0, 0, 0, 0.514);
+    text-shadow: 1px 1px 0px black;
+    padding: 5px;
+    /* inset é para dentro */
+}
+
+
+#img01{
+    /* shorthands 
+    background: color > image > position > repeat > [size] > attachment */
+    background: bisque url('../imagens/background001.jpg') right center no-repeat fixed;
+   background-size: cover; /* posso colocar apenas na section.image */
+    
+}
+
+#img02{
+     /* shorthands 
+    background: color > image > position > repeat > [size] > attachment */
+    background: green url('../imagens/background002.jpg') right center no-repeat fixed;
+    background-size: cover;
+}
+
+
+footer{
+    color: white;
+    background-color: var(--cor1);
+    text-align: center;
+    padding: 10px;
+}
